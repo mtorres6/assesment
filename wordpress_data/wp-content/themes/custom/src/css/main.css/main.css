@@ -1,0 +1,13 @@
+html {
+  font: normal 1rem/1.6 Arial, sans-serif;
+}
+
+.row {
+  display: table;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.col {
+  display: table-cell;
+}
