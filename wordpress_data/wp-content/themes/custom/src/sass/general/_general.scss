@@ -1,0 +1,26 @@
+html { margin-top: 0 !important; }
+
+body { margin: 0; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 30px 30px;
+  color: $clr-black;
+  box-shadow: -3px 6px 13px -9px rgba($clr-black,0.75);
+
+  .logo { max-width: 130px; }
+
+  h1 {  
+    margin: 0 0 0 15px;
+    font: {
+      size: 46px;
+      weight: 700;
+    }
+  }
+}  
+
+@media (max-width: 1199px) {
+  header { justify-content: center; }
+}
