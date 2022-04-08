@@ -9,22 +9,20 @@ function custom_styles() {
     
     wp_enqueue_style( 'maincss' ); 
 
-    if( is_singular( 'franchise' ) || is_post_type_archive( 'franchises' ) ){
+    if( is_singular( 'franchise' ) || is_post_type_archive( 'franchises') || is_single()){
         wp_enqueue_style( 'Franchise', get_template_directory_uri() . '/src/css/cpt/main.css', array(),'1.0' );
+
+        wp_register_script( 'customjs', get_template_directory_uri() . '/js/scripts.js', array(), '1.0' );
+        wp_enqueue_script( 'customjs' );
     }
 }
 
 // Register js
 function custom_js() {
     //Custom JS
-    wp_register_script( 'customjs', get_template_directory_uri() . '/js/main.js', array(), '1.0' );
+    //wp_register_script( 'customjs', get_template_directory_uri() . '/js/main.js', array(), '1.0' );
     
-    wp_enqueue_script( 'customjs' );
-
-    // Webpack JS
-    wp_register_script( 'webpackjs', get_template_directory_uri() . '/src/index.js', array(), '1.0' );
-    
-    wp_enqueue_script( 'webpackjs' );
+    //wp_enqueue_script( 'customjs' );
 }
 
 // Register Custom Post Type
@@ -54,5 +52,4 @@ function custom_post_type() {
 add_action( 'wp_enqueue_scripts', 'custom_styles' ); 
 add_action( 'wp_enqueue_scripts', 'custom_js' ); 
 add_action( 'init', 'custom_post_type' );
-
 ?>

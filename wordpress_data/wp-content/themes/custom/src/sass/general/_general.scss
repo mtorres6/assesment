@@ -21,6 +21,28 @@ header {
   }
 }  
 
+.main-container {
+  @include width-constrain;
+  padding: 60px 0;
+
+  h1 {
+    text-align: center;
+
+    a { color: $clr-black; }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  padding: 20px;
+  box-shadow: 3px 11px 28px 6px rgba($clr-black,0.75);
+
+  .logo { max-width: 130px; }
+}
+
 @media (max-width: 1199px) {
   header { justify-content: center; }
 }

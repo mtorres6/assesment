@@ -1,3 +1,4 @@
+// Archive styles
 .container {
   @include width-constrain;
   padding: 30px 0;
@@ -34,8 +35,16 @@
       flex-wrap: wrap;
 
       article { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         flex: 28%;
+        padding-top: 10px;
         margin: 15px; 
+        max-width: 386px;
+        width: 100%;
+        box-shadow: -3px 6px 13px -9px rgba($clr-black,0.75);
       }
 
       p {
@@ -64,13 +73,7 @@
     .archive-title { text-align: center; }
 
     .loop-inner { 
-      article { 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex: 43%; 
-      }
+      article { flex: 43%; }
     }
  }
 
@@ -82,3 +85,13 @@
 
 }
 
+// Single styles 
+.container-single { 
+  @include width-constrain;
+  padding-top: 30px;
+
+  img { 
+    display: block;
+    margin: 0 auto; 
+  }
+}
