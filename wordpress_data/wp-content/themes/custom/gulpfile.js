@@ -13,4 +13,9 @@ gulp.task('cpt', () => {
         .pipe(gulp.dest('./src/css/cpt/'));
 });
 
-gulp.task('default', gulp.series(['cpt','styles'])); 
+gulp.task('scripts', () => {
+    return gulp.src('./src/js/scripts/*.js')
+        .pipe(gulp.dest('./src/js/'));
+});
+
+gulp.task('default', gulp.series(['cpt','styles', 'scripts'])); 

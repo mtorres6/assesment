@@ -12,8 +12,6 @@
                 <?php get_template_part( 'loop-franchise' ); ?>
             </div>
 
-            <?php get_template_part( 'pagination' ); ?>
-               
         </div>
 
     </section>
