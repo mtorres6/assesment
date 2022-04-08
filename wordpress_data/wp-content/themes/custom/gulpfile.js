@@ -2,9 +2,15 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 
 gulp.task('styles', () => {
-    return gulp.src('./src/sass/*.scss')
+    return gulp.src('./src/sass/general/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./src/css/main.css'));
+        .pipe(gulp.dest('./src/css/general/'));
 });
 
-gulp.task('default', gulp.series(['styles'])); 
+gulp.task('cpt', () => {
+    return gulp.src('./src/sass/cpt/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./src/css/cpt/'));
+});
+
+gulp.task('default', gulp.series(['cpt','styles'])); 
